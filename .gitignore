@@ -13,5 +13,8 @@ assets/photos/*.jpeg
 assets/photos/*.png
 assets/mascot-color.png
 
+# Känslig config — API-nyckel lagras i GitHub Secrets istället
+reviews-config.json
+
 # Node
 node_modules/
