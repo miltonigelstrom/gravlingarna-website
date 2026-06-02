@@ -1,0 +1,838 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grävlingarna | Trädgårdsentreprenad Haninge, Tyresö, Huddinge & Nacka</title>
+<meta name="description" content="Häckklippning, måleri, röjning och grävning i södra Stockholm. Snabbt, pålitligt och fast pris. RUT-avdrag och godkänd F-skatt. Ring 08-507 705 30.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://gravlingarna.se/">
+
+<!-- Preload kritiska resurser -->
+<link rel="preload" href="assets/photos/team-duo.webp" as="image">
+<link rel="preload" href="assets/fonts/Trats.ttf" as="font" type="font/truetype" crossorigin>
+<link rel="preload" href="assets/Satoshi-Variable.ttf" as="font" type="font/truetype" crossorigin>
+
+<!-- Open Graph (sociala medier + Google-förhandsvisning) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gravlingarna.se/">
+<meta property="og:title" content="Grävlingarna | Trädgårdsentreprenad i södra Stockholm">
+<meta property="og:description" content="Häckklippning, måleri, röjning och grävning i södra Stockholm. Snabbt, pålitligt och fast pris.">
+<meta property="og:image" content="https://gravlingarna.se/assets/photos/hack-hog.jpg">
+<meta property="og:locale" content="sv_SE">
+<meta property="og:site_name" content="Grävlingarna">
+
+<!-- Lokal geo -->
+<meta name="geo.region" content="SE-AB">
+<meta name="geo.placename" content="Södra Stockholm">
+
+<!-- Schema.org — lokal verksamhet (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Grävlingarna Trädgårdsentreprenad",
+  "description": "Trädgårdsarbete, häckklippning, måleri, röjning och grävning i södra Stockholm.",
+  "url": "https://gravlingarna.se",
+  "telephone": "+46850770530",
+  "email": "info@gravlingarna.se",
+  "image": "https://gravlingarna.se/assets/mascot-color.png",
+  "priceRange": "$$",
+  "areaServed": [
+    { "@type": "City", "name": "Haninge" },
+    { "@type": "City", "name": "Tyresö" },
+    { "@type": "City", "name": "Huddinge" },
+    { "@type": "City", "name": "Nacka" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Trädgårdstjänster",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Häckklippning" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Trädgårdsarbete" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Måleri" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Röjning" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ogräsrensning" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Grävning" } }
+    ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "8",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "sameAs": [
+    "https://www.instagram.com/gravlingarna_entreprenad/"
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<style>
+/* ====== GRÄVLINGARNA — STARTSIDA ====== */
+
+/* Brödtext i Roboto (lättläst), rubriker kvar i Gila */
+:root { --font-text: 'Roboto', system-ui, -apple-system, sans-serif; }
+.btn { font-family: var(--font-display); font-weight: 600; letter-spacing: .005em; }
+
+/* Header */
+.hdr {
+  position: sticky; top: 0; z-index: 50;
+  transition: background .3s, box-shadow .3s, padding .3s;
+  padding: 18px 0;
+}
+.hdr.scrolled { background: rgba(246,241,230,.86); backdrop-filter: blur(12px); box-shadow: 0 1px 0 rgba(31,38,29,.08); padding: 10px 0; }
+.hdr .wrap { display: flex; align-items: center; gap: 28px; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.brand img.mark { height: 44px; width: auto; }
+.brand img.word { height: 27px; width: auto; }
+.nav { margin-left: auto; display: flex; align-items: center; gap: 30px; }
+.nav a { text-decoration: none; font-weight: 600; font-size: .98rem; color: var(--ink-soft); transition: color .2s; }
+.nav a:hover { color: var(--green-700); }
+.hdr .actions { display: flex; align-items: center; gap: 16px; }
+.tel { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; text-decoration: none; color: var(--ink); white-space: nowrap; }
+.burger { display: none; }
+
+/* Hero */
+.hero { padding: 40px 0 80px; position: relative; overflow: hidden; }
+.hero .wrap { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(28px, 5vw, 72px); align-items: center; }
+.hero h1 { font-size: clamp(2.9rem, 6.4vw, 5.4rem); line-height: .96; }
+.hero h1 .leaf { color: var(--green-700); }
+.hero .lede { font-family: var(--font-display); font-weight: 500; letter-spacing: -0.005em; font-size: clamp(1.2rem, 1.75vw, 1.5rem); line-height: 1.28; color: var(--ink-soft); margin-top: 24px; max-width: 28ch; }
+.hero .cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
+.hero .chips { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 38px; }
+.chip { display: inline-flex; align-items: center; gap: 9px; font-weight: 600; font-size: .92rem; color: var(--ink-soft); }
+.chip .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--green-500); box-shadow: 0 0 0 4px rgba(0,140,75,.16); }
+
+.hero-media { position: relative; }
+.hero-media .photo {
+  border-radius: 28px; overflow: hidden; box-shadow: var(--shadow-lg);
+  aspect-ratio: 4/5;
+}
+.hero-media .photo img { width: 100%; height: 100%; object-fit: cover; }
+.hero-badge {
+  position: absolute; left: -26px; bottom: 30px;
+  background: var(--yellow); color: var(--green-900);
+  border-radius: 18px; padding: 16px 20px; box-shadow: var(--shadow-md);
+  transform: rotate(-3deg);
+  font-family: var(--font-display); line-height: 1;
+}
+.hero-badge b { font-size: 1.9rem; display: block; }
+.hero-badge span { font-family: var(--font-text); font-weight: 700; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; }
+
+/* Sektion-grund */
+.section { padding: clamp(64px, 9vw, 120px) 0; }
+.section-head { max-width: 56ch; margin-bottom: 52px; }
+.section-head h2 { font-size: clamp(2.1rem, 4.4vw, 3.4rem); margin-top: 14px; }
+.section-head p { color: var(--ink-soft); font-size: 1.12rem; margin-top: 16px; }
+
+/* Video-galleri */
+.video-grid { display: grid; grid-template-columns: 1.6fr 1fr; grid-template-rows: 240px 240px; gap: 12px; border-radius: var(--radius); overflow: hidden; margin-bottom: 12px; }
+.video-grid .v-wrap { position: relative; overflow: hidden; background: #000; }
+.video-grid .v-wrap:nth-child(1) { grid-row: 1 / 3; }
+.video-grid .v-wrap video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.video-grid .v-wrap:nth-child(1) video { object-position: center 20%; }
+.video-grid .v-wrap:nth-child(2) video { object-position: 62% 50%; }
+.video-grid .v-wrap:nth-child(3) video { object-position: center 38%; }
+.jobs-cta { text-align: center; padding-top: 32px; }
+
+/* Före/efter */
+.ba-section { background: var(--green-700); }
+.ba-section .eyebrow { color: var(--yellow); }
+.ba-section .section-head h2 { color: #fff; }
+.ba-section .section-head p { color: rgba(246,241,230,.75); }
+.ba-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.ba-card { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-md); background: var(--paper); }
+.ba-wrap { position: relative; width: 100%; aspect-ratio: 4/5; overflow: hidden; cursor: col-resize; user-select: none; background: #1a1a1a; }
+.ba-wrap img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.ba-after { clip-path: inset(0 50% 0 0); }
+.ba-divider { position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; background: #fff; box-shadow: 0 0 10px rgba(0,0,0,.35); transform: translateX(-50%); pointer-events: none; }
+.ba-handle { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 44px; height: 44px; background: #fff; border-radius: 50%; box-shadow: 0 2px 14px rgba(0,0,0,.25); display: flex; align-items: center; justify-content: center; pointer-events: none; color: var(--ink); font-size: 1.1rem; }
+.ba-labels { position: absolute; bottom: 12px; left: 0; right: 0; display: flex; justify-content: space-between; padding: 0 14px; pointer-events: none; }
+.ba-labels span { background: rgba(0,0,0,.52); color: #fff; font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: 4px 10px; border-radius: 6px; }
+.ba-card-body { padding: 12px 16px 14px; }
+.ba-card-body .job-cat { font-family: var(--font-text); font-weight: 700; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--green-600); }
+.ba-card-body h3 { font-family: var(--font-display); font-size: 1.2rem; margin-top: 6px; }
+@media (max-width: 900px) { .ba-grid { grid-template-columns: 1fr; } }
+
+/* Om oss */
+.about .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 80px); align-items: center; }
+.about-photos { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 16px; }
+.about-photos .big { grid-column: 1 / -1; }
+.about-photos img { width: 100%; border-radius: 18px; box-shadow: var(--shadow-md); aspect-ratio: 4/3; object-fit: cover; }
+.about-photos .tall { aspect-ratio: 3/4; }
+.about h2 { font-size: clamp(2rem, 4vw, 3rem); margin-top: 14px; }
+.about p { color: var(--ink-soft); font-size: 1.1rem; margin-top: 18px; }
+.about .signers { display: flex; gap: 28px; margin-top: 28px; }
+.about .signers-mobile { display: none; }
+.about .signers div b { font-family: var(--font-display); font-size: 1.2rem; display: block; }
+.about .signers div span { color: var(--stone); font-size: .9rem; }
+
+/* Trygghet */
+.trust { background: var(--cream); }
+.trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.trust-card { background: var(--paper); border-radius: var(--radius); padding: 30px 26px; box-shadow: var(--shadow-sm); }
+.trust-card .badge { font-family: var(--font-display); color: var(--green-700); font-size: 1.05rem; background: rgba(0,140,75,.1); width: fit-content; padding: 6px 13px; border-radius: 100px; }
+.trust-card h3 { font-size: 1.25rem; margin-top: 18px; }
+.trust-card p { color: var(--ink-soft); margin-top: 8px; font-size: .96rem; }
+
+/* Områden */
+.areas { background: var(--green-700); color: #fff; text-align: center; }
+.areas .eyebrow { color: var(--yellow); justify-content: center; }
+.areas h2 { font-size: clamp(2rem, 4vw, 3rem); margin: 16px auto 0; }
+.area-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 36px; }
+.area-pill { border: 2px solid rgba(255,255,255,.28); border-radius: 100px; padding: 14px 30px; font-family: var(--font-display); font-size: 1.3rem; transition: .3s; }
+.area-pill:hover { background: var(--yellow); color: var(--green-900); border-color: var(--yellow); }
+
+
+/* Omdömen — layout */
+.reviews-outer { display: flex; gap: 28px; align-items: flex-start; }
+.reviews-sidebar { flex-shrink: 0; width: 172px; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 28px 16px 24px; background: #fff; border-radius: 14px; box-shadow: 0 2px 12px rgba(0,0,0,.08); border: 1px solid #f0ece4; }
+.rs-label { font-size: .78rem; font-weight: 800; color: var(--ink); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 10px; }
+.rs-stars { font-size: 1.7rem; color: #FBBC04; line-height: 1; margin-bottom: 10px; letter-spacing: 2px; }
+.rs-count { font-size: .76rem; color: var(--stone); line-height: 1.45; margin-bottom: 16px; }
+.rs-google { font-size: 1.3rem; font-weight: 700; letter-spacing: -.01em; font-family: Arial, sans-serif; }
+.g-blue   { color: #4285F4; }
+.g-red    { color: #EA4335; }
+.g-yellow { color: #FBBC05; }
+.g-green  { color: #34A853; }
+
+/* Omdömen — carousel */
+.cr-outer { flex: 1; min-width: 0; }
+.cr-wrap { display: flex; align-items: center; gap: 10px; }
+.cr-viewport { overflow: hidden; flex: 1; min-width: 0; }
+.cr-track { display: flex; gap: 14px; transition: transform .45s cubic-bezier(.2,.8,.2,1); }
+.cr-track .review { flex: 0 0 calc((100% - 28px) / 3); min-width: 0; }
+.cr-btn { flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%; border: 1px solid #ddd; background: #fff; color: #555; font-size: 1.2rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all .2s; box-shadow: 0 1px 4px rgba(0,0,0,.1); }
+.cr-btn:hover:not(:disabled) { background: var(--green-700); color: #fff; border-color: var(--green-700); }
+.cr-btn:disabled { opacity: .22; cursor: not-allowed; }
+.cr-dots { display: flex; justify-content: center; gap: 7px; margin-top: 16px; }
+.cr-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--sand); cursor: pointer; border: 0; padding: 0; transition: width .25s, border-radius .25s, background .25s; }
+.cr-dot.active { background: var(--green-700); width: 22px; border-radius: 3px; }
+
+/* Omdömen — kort */
+.review { background: #fff; border-radius: 12px; padding: 18px 16px 14px; box-shadow: 0 2px 8px rgba(0,0,0,.07); border: 1px solid #f0ece4; }
+.review-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.review-avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+.review-avatar-fb { width: 40px; height: 40px; border-radius: 50%; background: var(--green-700); color: #fff; font-size: 1rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.review-name-wrap { flex: 1; min-width: 0; }
+.review-author { font-weight: 700; font-size: .88rem; color: var(--ink); display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.review-when { font-size: .74rem; color: var(--stone); }
+.review-g { flex-shrink: 0; font-size: .9rem; font-weight: 900; color: #4285F4; font-family: Arial, sans-serif; line-height: 1; }
+.review-stars { color: #FBBC04; font-size: .9rem; letter-spacing: 1px; display: block; margin-bottom: 8px; }
+.review-body { font-size: .85rem; line-height: 1.55; color: #333; margin: 0; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.review-body.expanded { display: block; -webkit-line-clamp: unset; overflow: visible; }
+.review-readmore { background: none; border: none; color: var(--stone); font-size: .78rem; cursor: pointer; padding: 5px 0 0; text-decoration: underline; text-underline-offset: 2px; display: block; }
+.placeholder-note { margin-top: 18px; font-size: .78rem; color: var(--stone); }
+
+/* Mobil: carousel → staplad lista */
+@media (max-width: 900px) {
+  .reviews-outer { flex-direction: column; }
+  .reviews-sidebar { width: 100%; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 12px 20px; padding: 18px 20px; }
+  .rs-label { margin-bottom: 0; }
+  .cr-btn { display: none; }
+  .cr-track { flex-direction: column; transform: none !important; }
+  .cr-track .review { flex: none; }
+  .cr-dots { display: none; }
+}
+
+/* Kontakt */
+.contact { background: var(--ink); color: var(--cream); }
+.contact .wrap { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(32px, 6vw, 72px); }
+.contact .eyebrow { color: var(--yellow); }
+.contact h2 { color: #fff; font-size: clamp(2rem, 4vw, 3.2rem); margin-top: 14px; }
+.contact .intro { color: rgba(246,241,230,.7); margin-top: 18px; font-size: 1.08rem; max-width: 36ch; }
+.contact-info { margin-top: 36px; display: grid; gap: 22px; }
+.contact-info a { text-decoration: none; }
+.ci { display: flex; flex-direction: column; gap: 3px; }
+.ci small { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--green-300); }
+.ci b { font-family: var(--font-display); font-size: 1.5rem; }
+form { background: var(--paper); border-radius: var(--radius-lg); padding: clamp(26px, 4vw, 44px); color: var(--ink); box-shadow: var(--shadow-lg); }
+.field { margin-bottom: 20px; }
+.field label { display: block; font-weight: 700; font-size: .92rem; margin-bottom: 8px; }
+.field .req { color: var(--green-600); }
+.field input, .field textarea {
+  width: 100%; font-family: var(--font-text); font-size: 1rem; color: var(--ink);
+  padding: 14px 16px; border-radius: 12px; border: 1.5px solid var(--sand); background: var(--cream);
+  transition: border-color .2s, box-shadow .2s;
+}
+.field input:focus, .field textarea:focus { outline: none; border-color: var(--green-500); box-shadow: 0 0 0 4px rgba(0,140,75,.14); background: #fff; }
+.field textarea { resize: vertical; min-height: 130px; }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+form .btn { width: 100%; justify-content: center; margin-top: 6px; font-size: 1.05rem; }
+.form-foot { margin-top: 16px; font-size: .85rem; color: var(--stone); text-align: center; }
+[data-form-note] { background: rgba(0,140,75,.12); color: var(--green-700); border-radius: 12px; padding: 14px 16px; font-weight: 700; margin-bottom: 18px; }
+
+/* Footer */
+.foot { background: var(--green-900); color: rgba(246,241,230,.7); padding: 70px 0 40px; }
+.foot .wrap { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; }
+.foot .word { height: 26px; filter: brightness(0) invert(1); }
+.foot .f-mascot { width: 78px; margin-top: 24px; }
+.foot h4 { color: #fff; font-family: var(--font-text); font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 16px; }
+.foot ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.foot a { text-decoration: none; transition: color .2s; }
+.foot a:hover { color: var(--yellow); }
+.foot .bar { border-top: 1px solid rgba(255,255,255,.12); margin-top: 50px; padding-top: 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: .85rem; }
+
+/* Responsivt */
+@media (max-width: 1024px) {
+  .nav { display: none; }
+  .burger { display: inline-flex; }
+}
+@media (max-width: 900px) {
+  .hero .wrap, .about .wrap, .contact .wrap { grid-template-columns: 1fr; }
+  .hero-media { order: -1; max-width: 440px; }
+  .trust-grid { grid-template-columns: 1fr; }
+  .jobs-peek-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 160px 160px 160px; }
+  .jobs-peek-grid img:nth-child(1) { grid-row: auto; }
+  .jobs-peek-grid img:nth-child(4) { grid-column: auto; }
+  .foot .wrap { grid-template-columns: 1fr 1fr; }
+  .about .signers { margin-bottom: 0; }
+  /* Signers: visa under bilder, dölj i texten när layouten är enkelspaltig */
+  .about .signers-mobile { display: grid; grid-template-columns: 1fr 1fr; grid-column: 1 / -1; margin-top: 12px; gap: 16px; }
+  .about .signers-mobile div { display: flex; flex-direction: column; align-items: center; text-align: center; }
+  .about .signers-desktop { display: none; }
+}
+@media (max-width: 560px) {
+  .field-row { grid-template-columns: 1fr; }
+  .trust-grid { grid-template-columns: 1fr; }
+  .foot .wrap { grid-template-columns: 1fr; }
+  /* Logotyp — visa bara maskotet, lite större */
+  .brand img.mark { height: 40px; }
+  .brand img.word { display: none; }
+  /* Telefonnummer dolt på liten skärm för att ge plats */
+  .hdr .tel { display: none; }
+  /* Header layout på mobil: [logo vänster] [Få offert centrerat] [burger höger] */
+  .hdr .wrap { position: relative; gap: 0; }
+  .hdr .actions { flex: 1; display: flex; align-items: center; justify-content: flex-end; }
+  .hdr .actions .btn { position: absolute; left: 50%; transform: translateX(-50%); }
+  /* Eyebrow — ingen radbrytning */
+  .eyebrow { white-space: nowrap; font-size: .72rem; letter-spacing: .12em; }
+}
+
+/* Mobilmeny overlay */
+@media (max-width: 1024px) {
+  .nav.open {
+    display: flex; flex-direction: column; gap: 22px;
+    position: absolute; top: 100%; left: 0; right: 0;
+    background: var(--paper); padding: 28px clamp(20px,5vw,56px); box-shadow: var(--shadow-md);
+    margin: 0;
+  }
+  .nav.open a { font-size: 1.2rem; }
+  .burger { flex-direction: column; gap: 5px; background: none; border: 0; cursor: pointer; padding: 10px; }
+  .burger span { width: 26px; height: 2.5px; background: var(--ink); border-radius: 2px; transition: .3s; }
+  .burger.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+  .burger.open span:nth-child(2) { opacity: 0; }
+  .burger.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+}
+</style>
+</head>
+<body>
+
+<header class="hdr" data-header>
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Grävlingarna">
+      <img class="mark" src="assets/mascot-color.webp" alt="Grävlingarna logotyp">
+      <img class="word" src="assets/logo-wordmark.svg" alt="Grävlingarna">
+    </a>
+    <nav class="nav" data-nav>
+      <a href="#tjanster">Tjänster</a>
+      <a href="jobb.html">Jobb</a>
+      <a href="#om">Om oss</a>
+      <a href="#omdomen">Omdömen</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <div class="actions">
+      <a class="tel" href="tel:+46850770530">08-507 705 30</a>
+      <a class="btn btn-green" href="#kontakt">Få offert</a>
+      <button class="burger" data-burger aria-label="Meny" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-text">
+        <span class="eyebrow reveal">Trädgårdsarbete i södra Stockholm</span>
+        <h1 class="reveal d1">Det där jobbet du<br>skjutit upp. Vi fixar<span class="leaf"> det.</span></h1>
+        <p class="lede reveal d2">Vi är Emil och Milton. Två killar som gillar att jobba med händerna och inte lämnar förrän det ser bra ut.</p>
+        <div class="cta-row reveal d3">
+          <a class="btn btn-green" href="#kontakt">Begär offert</a>
+          <a class="btn btn-ghost" href="jobb.html">Se vad vi gjort</a>
+        </div>
+        <div class="chips reveal d4">
+          <span class="chip"><span class="dot"></span> Godkänd F-skatt</span>
+          <span class="chip"><span class="dot"></span> RUT-avdrag</span>
+          <span class="chip"><span class="dot"></span> Ansvarsförsäkrade</span>
+        </div>
+      </div>
+      <div class="hero-media reveal d2">
+        <div class="photo"><img src="assets/photos/team-duo.webp" alt="Emil och Milton, Grävlingarna" fetchpriority="high"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOBB -->
+  <section class="section" id="tjanster">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Utfört arbete</span>
+        <h2>Några av våra jobb.</h2>
+      </div>
+      <div class="video-grid reveal d1">
+        <div class="v-wrap">
+          <video src="assets/videos/5.mp4" autoplay muted loop playsinline preload="metadata" title="Grävlingarna utför trädgårdsarbete i södra Stockholm"></video>
+        </div>
+        <div class="v-wrap">
+          <video src="assets/videos/4.mp4" autoplay muted loop playsinline preload="none" title="Grävlingarna anlägger markduk och grus"></video>
+        </div>
+        <div class="v-wrap">
+          <video src="assets/videos/3.mp4" autoplay muted loop playsinline preload="none" title="Grävlingarna utför häckklippning"></video>
+        </div>
+      </div>
+      <div class="jobs-cta reveal d2">
+        <a class="btn btn-green" href="jobb.html">Se alla jobb</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FÖRE / EFTER -->
+  <section class="section ba-section" id="fore-efter">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Före &amp; efter</span>
+        <h2>Skillnaden talar för sig själv.</h2>
+        <p>Dra i pilen och se resultatet.</p>
+      </div>
+      <div class="ba-grid">
+
+        <div class="ba-card reveal">
+          <div class="ba-wrap" data-ba>
+            <img src="assets/photos/malning-efter.webp" alt="Efter målning" loading="lazy">
+            <img class="ba-after" src="assets/photos/malning-fore.webp" alt="Före målning" loading="lazy">
+            <div class="ba-divider"></div>
+            <div class="ba-handle">&#8596;</div>
+            <div class="ba-labels"><span>Före</span><span>Efter</span></div>
+          </div>
+          <div class="ba-card-body">
+            <span class="job-cat">Måleri</span>
+            <h3>Fasadmålning</h3>
+          </div>
+        </div>
+
+        <div class="ba-card reveal d1">
+          <div class="ba-wrap" data-ba>
+            <img src="assets/photos/rabatt-efter.webp" alt="Efter markduksanläggning" loading="lazy">
+            <img class="ba-after" src="assets/photos/rabatt-fore.webp" alt="Före markduksanläggning" loading="lazy">
+            <div class="ba-divider"></div>
+            <div class="ba-handle">&#8596;</div>
+            <div class="ba-labels"><span>Före</span><span>Efter</span></div>
+          </div>
+          <div class="ba-card-body">
+            <span class="job-cat">Markduk</span>
+            <h3>Markduksanläggning</h3>
+          </div>
+        </div>
+
+        <div class="ba-card reveal d2">
+          <div class="ba-wrap" data-ba>
+            <img src="assets/photos/rojning-efter.webp" alt="Efter röjning" loading="lazy">
+            <img class="ba-after" src="assets/photos/rojning-fore.webp" alt="Före röjning" loading="lazy">
+            <div class="ba-divider"></div>
+            <div class="ba-handle">&#8596;</div>
+            <div class="ba-labels"><span>Före</span><span>Efter</span></div>
+          </div>
+          <div class="ba-card-body">
+            <span class="job-cat">Röjning</span>
+            <h3>Röjning</h3>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- OM OSS -->
+  <section class="section about" id="om">
+    <div class="wrap">
+      <div class="about-photos reveal">
+        <img class="big" src="assets/photos/team-duo.webp" alt="Emil och Milton" loading="lazy">
+        <img class="tall" src="assets/photos/emil.webp" alt="Emil" loading="lazy">
+        <img class="tall" src="assets/photos/milton.webp" alt="Milton" loading="lazy">
+        <!-- Visas bara på mobil, direkt under bilderna -->
+        <div class="signers signers-mobile">
+          <div><b>Emil</b><span>Grundare</span></div>
+          <div><b>Milton</b><span>Grundare</span></div>
+        </div>
+      </div>
+      <div class="about-text reveal d1">
+        <span class="eyebrow">Vilka är vi</span>
+        <h2>Vi startade Grävlingarna för att vi gillar att jobba utomhus.</h2>
+        <p>Som 15-åringar började vi hjälpa husägare i området, snart växte det till riktiga trädgårdsjobb. Idag har vi erfarenhet av allt från ogräsrensning och häckklippning till måleri, slyröjning och gräsmattorenovering.</p>
+        <p>Vi tar oss an allt från det lilla trädgårdsarbetet till större företagsjobb, alltid med hög kvalitet och ett professionellt resultat.</p>
+        <!-- Visas bara på desktop -->
+        <div class="signers signers-desktop">
+          <div><b>Emil</b><span>Grundare</span></div>
+          <div><b>Milton</b><span>Grundare</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRYGGHET -->
+  <section class="section trust">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Det praktiska</span>
+        <h2>Inga krångliga avtal. Inget du behöver hålla reda på.</h2>
+      </div>
+      <div class="trust-grid">
+        <div class="trust-card reveal"><span class="badge">F-skatt</span><h3>Godkänd F-skatt</h3><p>Vi sköter vår del av skatterna. Du anlitar oss utan att behöva tänka på det.</p></div>
+        <div class="trust-card reveal d1"><span class="badge">RUT</span><h3>RUT-avdrag</h3><p>Du betalar halva priset. Vi söker resten direkt hos Skatteverket. Syns på fakturan.</p></div>
+        <div class="trust-card reveal d2"><span class="badge">Försäkrade</span><h3>Ansvarsförsäkring</h3><p>Om något mot förmodan går snett är du täckt. Vi har aldrig behövt använda den.</p></div>
+        <div class="trust-card reveal d3"><span class="badge">Verktyg</span><h3>Vi tar med allt</h3><p>Maskiner, verktyg, skyddsutrustning. Du behöver inte fixa ett dugg.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OMRÅDEN -->
+  <section class="section areas">
+    <div class="wrap">
+      <span class="eyebrow reveal">Var vi jobbar</span>
+      <h2 class="reveal d1">Södra Stockholm. Det är vår hemmaplan.</h2>
+      <div class="area-row">
+        <span class="area-pill reveal">Haninge</span>
+        <span class="area-pill reveal d1">Tyresö</span>
+        <span class="area-pill reveal d2">Huddinge</span>
+        <span class="area-pill reveal d3">Nacka</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- OMDÖMEN -->
+  <section class="section" id="omdomen">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Omdömen</span>
+        <h2>Vad kunderna säger.</h2>
+      </div>
+      <!-- REVIEWS-START -->
+      <div class="reviews-outer reveal">
+        <div class="reviews-sidebar">
+          <div class="rs-label">Utmärkt</div>
+          <div class="rs-stars">★★★★★</div>
+          <div class="rs-count">Baserat på 8 recensioner</div>
+          <div class="rs-google"><span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span></div>
+        </div>
+        <div class="cr-outer">
+          <div class="cr-wrap">
+            <button class="cr-btn cr-prev" aria-label="Föregående" onclick="reviewsNav(-1)">&#8249;</button>
+            <div class="cr-viewport">
+              <div class="cr-track" id="reviewsTrack">
+            <div class="review">
+              <div class="review-header">
+                <img class="review-avatar" src="https://lh3.googleusercontent.com/a/ACg8ocL86j_r9z1yOKIuhUySOHelD-ug44McyDMm7QZUCnqUefmo5eU=s128-c0x00000000-cc-rp-mo" alt="Christine Lexell" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="review-avatar-fb" style="display:none">C</div>
+                <div class="review-name-wrap">
+                  <span class="review-author">Christine Lexell</span>
+                  <span class="review-when">för 2 månader sedan</span>
+                </div>
+                <span class="review-g">G</span>
+              </div>
+              <span class="review-stars">★★★★★</span>
+              <p class="review-body">"Vi har anlitat Grävlingarna två gånger, en gång för kapning av en jättehög thujahäck och en gång för is/snöskottning. Båda gångerna har vi varit supernöjda - snabbt, smidigt och proffsigt rakt igenom. Rekommenderas!"</p>
+              <button class="review-readmore" onclick="this.previousElementSibling.classList.add('expanded');this.remove()">Läs mer</button>
+            </div>
+            <div class="review">
+              <div class="review-header">
+                <img class="review-avatar" src="https://lh3.googleusercontent.com/a/ACg8ocJH00zg7ItTFW9O0a7UB9hLjGqkYLwAGVgQH-JnAdjiJExWZQ=s128-c0x00000000-cc-rp-mo" alt="Helena Karlsson" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="review-avatar-fb" style="display:none">H</div>
+                <div class="review-name-wrap">
+                  <span class="review-author">Helena Karlsson</span>
+                  <span class="review-when">för 2 månader sedan</span>
+                </div>
+                <span class="review-g">G</span>
+              </div>
+              <span class="review-stars">★★★★★</span>
+              <p class="review-body">"Bra killar som jobbade hårt och helt enligt våra önskemål! Rekommenderas det varmaste!"</p>
+            </div>
+            <div class="review">
+              <div class="review-header">
+                <img class="review-avatar" src="https://lh3.googleusercontent.com/a-/ALV-UjWH0OzEDGSG0fYtsAjLOG0ATWYTzyu4N1iHRC2pFErD5WRcYOQ=s128-c0x00000000-cc-rp-mo" alt="Adrian Nieves" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="review-avatar-fb" style="display:none">A</div>
+                <div class="review-name-wrap">
+                  <span class="review-author">Adrian Nieves</span>
+                  <span class="review-when">för 2 månader sedan</span>
+                </div>
+                <span class="review-g">G</span>
+              </div>
+              <span class="review-stars">★★★★★</span>
+              <p class="review-body">"Väldigt professionellt utfört arbete. Kommer att anlita igen"</p>
+            </div>
+            <div class="review">
+              <div class="review-header">
+                <img class="review-avatar" src="https://lh3.googleusercontent.com/a/ACg8ocJAu5tdYNpDd8ItsCeVh2gtvCTCY0YR0YyLtsx0rc_OD11qcJH3=s128-c0x00000000-cc-rp-mo" alt="Natasja V" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="review-avatar-fb" style="display:none">N</div>
+                <div class="review-name-wrap">
+                  <span class="review-author">Natasja V</span>
+                  <span class="review-when">under den senaste veckan</span>
+                </div>
+                <span class="review-g">G</span>
+              </div>
+              <span class="review-stars">★★★★★</span>
+              <p class="review-body">"Otroligt bra och prisvärd trädgårdshjälp. Killarna var punktliga, noggranna och skickliga. Vi kommer att anlita dem igen!"</p>
+            </div>
+            <div class="review">
+              <div class="review-header">
+                <img class="review-avatar" src="https://lh3.googleusercontent.com/a-/ALV-UjUdyT2JEvlYSVuxtEiTyoW_1Qy-pzt1ejEpORtB4tHW60JZkAc=s128-c0x00000000-cc-rp-mo" alt="Emelie Wallin" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="review-avatar-fb" style="display:none">E</div>
+                <div class="review-name-wrap">
+                  <span class="review-author">Emelie Wallin</span>
+                  <span class="review-when">för en månad sedan</span>
+                </div>
+                <span class="review-g">G</span>
+              </div>
+              <span class="review-stars">★★★★★</span>
+              <p class="review-body">"Supertrevliga grabbar, effektivt trädgårdsarbete. Mycket nöjda!"</p>
+            </div>
+              </div>
+            </div>
+            <button class="cr-btn cr-next" aria-label="Nästa" onclick="reviewsNav(1)">&#8250;</button>
+          </div>
+          <div class="cr-dots" id="reviewsDots"></div>
+        </div>
+      </div>
+      <p class="placeholder-note reveal">Hämtade från Google · 8 omdömen totalt · Uppdaterat 2026-05-29</p>
+      <!-- REVIEWS-END -->
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section class="section contact" id="kontakt">
+    <div class="wrap">
+      <div class="contact-left reveal">
+        <span class="eyebrow">Kontakt</span>
+        <h2>Berätta vad du behöver hjälp med.</h2>
+        <p class="intro">Vi svarar inom ett dygn med ett prisförslag. Inget bindande, inget krångel. Bara ett rakt svar.</p>
+        <div class="contact-info">
+          <a class="ci" href="tel:+46850770530"><small>Telefon</small><b>08-507 705 30</b></a>
+          <a class="ci" href="mailto:info@gravlingarna.se"><small>E-post</small><b>info@gravlingarna.se</b></a>
+          <a class="ci" href="https://www.instagram.com/gravlingarna_entreprenad/" target="_blank" rel="noopener"><small>Instagram</small><b>@gravlingarna_entreprenad</b></a>
+          <a class="ci" href="https://www.facebook.com/profile.php?id=61582218075044" target="_blank" rel="noopener"><small>Facebook &amp; Messenger</small><b>Grävlingarna</b></a>
+        </div>
+      </div>
+      <form data-contact-form class="reveal d1" novalidate name="kontakt" netlify netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="kontakt">
+        <div data-form-note hidden>Tack! Ditt meddelande har skickats. Vi hör av oss inom kort.</div>
+        <!-- honeypot — dölj för bots -->
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="field-row">
+          <div class="field"><label>Namn <span class="req">*</span></label><input type="text" name="namn" placeholder="För- och efternamn" required></div>
+          <div class="field"><label>Telefon</label><input type="tel" name="telefon" placeholder="070-123 45 67"></div>
+        </div>
+        <div class="field"><label>E-post <span class="req">*</span></label><input type="email" name="epost" placeholder="din@epost.se" required></div>
+        <div class="field"><label>Meddelande <span class="req">*</span></label><textarea name="meddelande" placeholder="Berätta kort vad du behöver hjälp med…" required></textarea></div>
+        <button class="btn btn-yellow" type="submit">Skicka förfrågan</button>
+        <p class="form-foot">Vi svarar oftast samma dag · Kostnadsfri offert</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <img class="word" src="assets/logo-wordmark.svg" alt="Grävlingarna">
+      <p style="margin-top:18px;max-width:32ch">Grävlingarna Trädgårdsentreprenad i södra Stockholm.</p>
+      <img class="f-mascot" src="assets/mascot-color.webp" alt="Grävlingarna maskot" loading="lazy">
+    </div>
+    <div>
+      <h4>Sidor</h4>
+      <ul>
+        <li><a href="#tjanster">Tjänster</a></li>
+        <li><a href="jobb.html">Jobb</a></li>
+        <li><a href="#om">Om oss</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Kontakt</h4>
+      <ul>
+        <li><a href="tel:+46850770530">08-507 705 30</a></li>
+        <li><a href="mailto:info@gravlingarna.se">info@gravlingarna.se</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=61582218075044" target="_blank" rel="noopener">Facebook</a></li>
+        <li>Haninge · Tyresö · Huddinge · Nacka</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap"><div class="bar"><span>© 2026 Grävlingarna</span><span>Godkänd F-skatt · RUT-avdrag · Försäkrade</span></div></div>
+</footer>
+
+<script src="assets/reveal.js"></script>
+<script>
+/* ── Reviews carousel ───────────────────────────────────────────────── */
+(function () {
+  var track  = document.getElementById('reviewsTrack');
+  var dotsEl = document.getElementById('reviewsDots');
+  if (!track) return;
+
+  var cards = Array.from(track.querySelectorAll('.review'));
+  var pos   = 0;
+  var PER   = 3; // kort synliga åt gången
+
+  function maxPos() { return Math.max(0, cards.length - PER); }
+
+  function go(n) {
+    pos = Math.max(0, Math.min(maxPos(), n));
+    var w   = cards[0] ? cards[0].offsetWidth : 0;
+    var gap = 24;
+    track.style.transform = 'translateX(-' + (pos * (w + gap)) + 'px)';
+    document.querySelectorAll('.cr-dot').forEach(function (d, i) {
+      d.classList.toggle('active', i === pos);
+    });
+    var prev = document.querySelector('.cr-prev');
+    var next = document.querySelector('.cr-next');
+    if (prev) prev.disabled = pos === 0;
+    if (next) next.disabled = pos >= maxPos();
+  }
+
+  /* Bygg prickar */
+  if (dotsEl) {
+    for (var i = 0; i <= maxPos(); i++) {
+      var d = document.createElement('button');
+      d.className   = 'cr-dot' + (i === 0 ? ' active' : '');
+      d.setAttribute('aria-label', 'Omdöme ' + (i + 1));
+      (function (idx) { d.addEventListener('click', function () { go(idx); }); })(i);
+      dotsEl.appendChild(d);
+    }
+  }
+
+  /* Global för onclick-attributen i HTML */
+  window.reviewsNav = function (dir) { go(pos + dir); };
+
+  go(0);
+  window.addEventListener('resize', function () { go(pos); });
+})();
+
+/* ── Kontaktformulär ────────────────────────────────────────────────── */
+(function () {
+  var form = document.querySelector('[data-contact-form]');
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    /* Enkel validering */
+    var ok = true;
+    form.querySelectorAll('[required]').forEach(function (f) {
+      if (!f.value.trim()) { f.focus(); ok = false; }
+    });
+    if (!ok) return;
+
+    /* Honeypot-koll */
+    if (form.querySelector('[name=_honey]').value) return;
+
+    var btn  = form.querySelector('[type=submit]');
+    var note = form.querySelector('[data-form-note]');
+
+    btn.disabled    = true;
+    btn.textContent = 'Skickar…';
+
+    var payload = {
+      Namn:       form.querySelector('[name=namn]').value,
+      Telefon:    form.querySelector('[name=telefon]').value || '(ej angivet)',
+      Epost:      form.querySelector('[name=epost]').value,
+      Meddelande: form.querySelector('[name=meddelande]').value,
+      _subject:   'Ny förfrågan från hemsidan'
+    };
+
+    fetch('https://formspree.io/f/mnjryeqd', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body:    JSON.stringify(payload)
+    })
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      if (data.ok) {
+        /* Visa bekräftelse, dölj resten av formuläret */
+        note.hidden = false;
+        note.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        form.querySelectorAll('input, textarea').forEach(function (f) { f.value = ''; });
+        btn.style.display = 'none';
+        form.querySelector('.form-foot').style.display = 'none';
+      } else {
+        throw new Error('failed');
+      }
+    })
+    .catch(function () {
+      btn.disabled    = false;
+      btn.textContent = 'Skicka förfrågan';
+      alert('Något gick fel. Prova igen eller ring oss på 08-507 705 30.');
+    });
+  });
+})();
+</script>
+<script>
+/* Före/efter-sliders */
+document.querySelectorAll('[data-ba]').forEach(function(wrap) {
+  var after = wrap.querySelector('.ba-after');
+  var divider = wrap.querySelector('.ba-divider');
+  var handle = wrap.querySelector('.ba-handle');
+  var dragging = false;
+  var animated = false;
+
+  function setPos(pct) {
+    after.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
+    divider.style.left = pct + '%';
+    handle.style.left = pct + '%';
+  }
+
+  function setPosFromX(x) {
+    var rect = wrap.getBoundingClientRect();
+    setPos(Math.max(0, Math.min(100, (x - rect.left) / rect.width * 100)));
+  }
+
+  /* Startposition */
+  setPos(50);
+
+  /* Auto-sweep när kortet scrollas in */
+  function autoSweep() {
+    if (animated) return;
+    animated = true;
+    var start = null;
+    var duration = 3800;
+    /* Sweep: 50 → 20 → 80 → 50 */
+    function keyframe(t) {
+      if (t < 0.33) return 50 - (30 * (t / 0.33));          /* 50→20 */
+      if (t < 0.66) return 20 + (60 * ((t - 0.33) / 0.33)); /* 20→80 */
+      return 80 - (30 * ((t - 0.66) / 0.34));               /* 80→50 */
+    }
+    function step(ts) {
+      if (!start) start = ts;
+      var t = Math.min((ts - start) / duration, 1);
+      setPos(keyframe(t));
+      if (t < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  var observer = new IntersectionObserver(function(entries) {
+    if (entries[0].isIntersecting) { autoSweep(); observer.disconnect(); }
+  }, { threshold: 0.4 });
+  observer.observe(wrap);
+
+  /* Manuell drag */
+  wrap.addEventListener('mousedown', function(e) { dragging = true; setPosFromX(e.clientX); e.preventDefault(); });
+  window.addEventListener('mousemove', function(e) { if (dragging) setPosFromX(e.clientX); });
+  window.addEventListener('mouseup', function() { dragging = false; });
+  wrap.addEventListener('touchstart', function(e) { dragging = true; setPosFromX(e.touches[0].clientX); }, { passive: true });
+  window.addEventListener('touchmove', function(e) { if (dragging) setPosFromX(e.touches[0].clientX); }, { passive: true });
+  window.addEventListener('touchend', function() { dragging = false; });
+});
+</script>
+</body>
+</html>

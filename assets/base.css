@@ -1,0 +1,202 @@
+/* ===========================================================
+   GRÄVLINGARNA — delat designsystem
+   Fonter: Coolvetica (rubriker), Trats (brödtext/UI)
+   =========================================================== */
+
+@font-face {
+  font-family: 'Gila';
+  src: url('fonts/Gila.ttf') format('truetype');
+  font-weight: 400 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Satoshi';
+  src: url('Satoshi-Variable.ttf') format('truetype');
+  font-weight: 300 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Trats';
+  src: url('fonts/Trats.ttf') format('truetype');
+  font-weight: 400 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Moderniz';
+  src: url('fonts/Moderniz.otf') format('opentype');
+  font-weight: 400 900;
+  font-display: swap;
+}
+
+:root {
+  /* Grön skala – från loggan */
+  --green-900: #04261a;
+  --green-800: #07301f;
+  --green-700: #006837;   /* primär */
+  --green-600: #007a40;
+  --green-500: #008c4b;   /* sekundär */
+  --green-300: #5fae7e;
+
+  /* Energifärg – från skylten */
+  --yellow:     #ffd21f;
+  --yellow-deep:#f4c400;
+  --lime:       #c4d600;
+
+  /* Varma, jordnära neutraler */
+  --cream:   #f6f1e6;
+  --paper:   #fffdf7;
+  --sand:    #ece4d3;
+  --stone:   #9a9180;
+  --ink:     #1f261d;   /* varm nästan-svart */
+  --ink-soft:#454c40;
+
+  --shadow-sm: 0 1px 2px rgba(31,38,29,.06), 0 2px 8px rgba(31,38,29,.06);
+  --shadow-md: 0 6px 18px rgba(31,38,29,.10), 0 2px 6px rgba(31,38,29,.06);
+  --shadow-lg: 0 24px 60px rgba(31,38,29,.18), 0 8px 20px rgba(31,38,29,.10);
+
+  --maxw: 1240px;
+  --radius: 18px;
+  --radius-lg: 28px;
+
+  --font-display: 'Satoshi', 'Gila', system-ui, sans-serif;
+  --font-text: 'Trats', system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-text);
+  color: var(--ink);
+  background: var(--cream);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  line-height: 1.55;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.02;
+  margin: 0;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+p { margin: 0; text-wrap: pretty; }
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+
+.wrap { width: 100%; max-width: var(--maxw); margin-inline: auto; padding-inline: clamp(20px, 5vw, 56px); }
+
+/* Knappar -------------------------------------------------- */
+.btn {
+  font-family: var(--font-text);
+  font-weight: 700;
+  font-size: 1rem;
+  display: inline-flex; align-items: center; gap: .55em;
+  padding: .85em 1.5em;
+  border-radius: 100px;
+  border: 0; cursor: pointer;
+  text-decoration: none;
+  transition: transform .25s cubic-bezier(.2,.8,.2,1), box-shadow .25s, background .2s, color .2s;
+  white-space: nowrap;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-green { background: var(--green-700); color: #fff; box-shadow: var(--shadow-md); }
+.btn-green:hover { background: var(--green-600); }
+.btn-yellow { background: var(--yellow); color: var(--green-900); box-shadow: var(--shadow-md); }
+.btn-yellow:hover { background: var(--yellow-deep); }
+.btn-ghost { background: transparent; color: inherit; box-shadow: inset 0 0 0 2px currentColor; }
+.btn-ghost:hover { background: rgba(0,0,0,.05); }
+
+/* Liten etikett ------------------------------------------- */
+.eyebrow {
+  font-family: var(--font-text);
+  font-weight: 700;
+  font-size: .8rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--green-700);
+  display: inline-flex; align-items: center; gap: .6em;
+}
+.eyebrow::before {
+  content: ""; width: 26px; height: 2px; background: currentColor; display: inline-block;
+}
+
+/* ===========================================================
+   FÖRE / EFTER — auto-avslöjning
+   =========================================================== */
+.ba {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--sand);
+  --pos: 100;            /* 100 = visar bara FÖRE, 0 = bara EFTER */
+  user-select: none;
+  box-shadow: var(--shadow-md);
+  aspect-ratio: 3 / 4;
+}
+.ba img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+.ba .ba-before {
+  position: absolute; inset: 0;
+  overflow: hidden;
+  clip-path: inset(0 calc(100% - var(--pos) * 1%) 0 0);
+  z-index: 2;
+}
+.ba .ba-divider {
+  position: absolute; top: 0; bottom: 0;
+  left: calc(var(--pos) * 1%);
+  width: 3px; margin-left: -1.5px;
+  background: var(--paper);
+  z-index: 3;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.08);
+}
+.ba .ba-handle {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--green-700);
+  display: grid; place-items: center;
+  box-shadow: var(--shadow-md);
+  font-size: 18px;
+}
+.ba .ba-handle::before { content: "‹ ›"; letter-spacing: -2px; font-weight: 700; }
+.ba .ba-tag {
+  position: absolute; bottom: 16px;
+  font-family: var(--font-text); font-weight: 700;
+  font-size: .78rem; letter-spacing: .14em; text-transform: uppercase;
+  padding: .5em .95em; border-radius: 100px;
+  z-index: 4; backdrop-filter: blur(4px);
+}
+.ba .ba-tag-before { left: 16px; background: rgba(31,38,29,.62); color: #fff; }
+.ba .ba-tag-after  { right: 16px; background: var(--yellow); color: var(--green-900); }
+.ba[data-ready] { cursor: ew-resize; }
+
+/* ===========================================================
+   SCROLL-REVEAL
+   =========================================================== */
+.reveal { transition: opacity .7s cubic-bezier(.2,.8,.2,1), transform .7s cubic-bezier(.2,.8,.2,1); }
+.reveal.pre { opacity: 0; transform: translateY(26px); }
+.reveal.d1 { transition-delay: .08s; }
+.reveal.d2 { transition-delay: .16s; }
+.reveal.d3 { transition-delay: .24s; }
+.reveal.d4 { transition-delay: .32s; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal.pre { opacity: 1; transform: none; transition: none; }
+}
+
+/* Maskot-detalj ------------------------------------------- */
+.mascot { display: inline-block; }
+
+/* Tillgänglighet ----------------------------------------- */
+:focus-visible { outline: 3px solid var(--green-500); outline-offset: 3px; }

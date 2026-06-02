@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <!-- Unikt namn för jobbet -->
+  <key>Label</key>
+  <string>se.gravlingarna.reviews-updater</string>
+
+  <!-- Kommando som körs: python3 + sökväg till scriptet -->
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/python3</string>
+    <string>/Users/milton.igelstrom/Desktop/Grävlingarna Hemsida/website/update_reviews.py</string>
+  </array>
+
+  <!-- Kör varje måndag kl 09:00 -->
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Weekday</key><integer>1</integer>
+    <key>Hour</key><integer>9</integer>
+    <key>Minute</key><integer>0</integer>
+  </dict>
+
+  <!-- Loggar -->
+  <key>StandardOutPath</key>
+  <string>/Users/milton.igelstrom/Desktop/Grävlingarna Hemsida/website/reviews-update.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/milton.igelstrom/Desktop/Grävlingarna Hemsida/website/reviews-update-error.log</string>
+
+  <!-- Kör INTE direkt vid inläsning, bara enligt schemat -->
+  <key>RunAtLoad</key>
+  <false/>
+</dict>
+</plist>

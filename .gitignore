@@ -1,0 +1,17 @@
+# System
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+
+# Original stora bildfiler (vi använder WebP)
+assets/photos/*.jpg
+assets/photos/*.jpeg
+assets/photos/*.png
+assets/mascot-color.png
+
+# Node
+node_modules/

@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Utförda jobb | Grävlingarna Trädgårdsentreprenad södra Stockholm</title>
+<meta name="description" content="Se bilder på våra utförda jobb — häckklippning, fasadmålning, grävning och ogräsrensning i Haninge, Tyresö, Huddinge och Nacka.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://gravlingarna.se/jobb.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gravlingarna.se/jobb.html">
+<meta property="og:title" content="Utförda jobb | Grävlingarna Trädgårdsentreprenad">
+<meta property="og:description" content="Se bilder på utförda jobb — häckklippning, fasadmålning, grävning och ogräsrensning i södra Stockholm.">
+<meta property="og:image" content="https://gravlingarna.se/assets/photos/hack-hog.jpg">
+<meta property="og:locale" content="sv_SE">
+<meta property="og:site_name" content="Grävlingarna">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<style>
+/* ====== JOBB-SIDA — samma uttryck som startsidan ====== */
+:root { --font-text: 'Roboto', system-ui, -apple-system, sans-serif; }
+.btn { font-family: var(--font-display); font-weight: 600; letter-spacing: .005em; }
+
+/* Header (matchar startsidan) */
+.hdr { position: sticky; top: 0; z-index: 50; transition: background .3s, box-shadow .3s, padding .3s; padding: 18px 0; }
+.hdr.scrolled { background: rgba(246,241,230,.86); backdrop-filter: blur(12px); box-shadow: 0 1px 0 rgba(31,38,29,.08); padding: 10px 0; }
+.hdr .wrap { display: flex; align-items: center; gap: 28px; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.brand img.mark { height: 44px; width: auto; }
+.brand img.word { height: 27px; width: auto; }
+.nav { margin-left: auto; display: flex; align-items: center; gap: 30px; }
+.nav a { text-decoration: none; font-weight: 600; font-size: .98rem; color: var(--ink-soft); transition: color .2s; }
+.nav a:hover, .nav a.active { color: var(--green-700); }
+.hdr .actions { display: flex; align-items: center; gap: 16px; }
+.tel { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; text-decoration: none; color: var(--ink); white-space: nowrap; }
+.burger { display: none; }
+
+/* Sid-hero — distinkt grönt band så man tydligt är på en ny sida */
+.page-hero { background: var(--green-900); color: var(--cream); position: relative; overflow: hidden; padding: 30px 0 clamp(56px,7vw,84px); }
+.page-hero::after { content: ""; position: absolute; right: -60px; bottom: -40px; width: 320px; height: 320px; background: radial-gradient(circle at center, rgba(255,210,31,.16), transparent 68%); pointer-events: none; }
+.page-hero .crumbs { font-size: .9rem; color: rgba(246,241,230,.6); margin-bottom: 26px; display: flex; align-items: center; gap: 10px; }
+.page-hero .crumbs a { color: var(--yellow); text-decoration: none; font-weight: 600; }
+.page-hero .grid { display: grid; grid-template-columns: 1fr auto; gap: clamp(28px,5vw,64px); align-items: center; }
+.page-hero .eyebrow { color: var(--yellow); }
+.page-hero h1 { font-size: clamp(2.8rem, 6vw, 5rem); line-height: .96; color: #fff; margin-top: 16px; }
+.page-hero h1 .leaf { color: var(--yellow); }
+.page-hero .lede { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.15rem,1.7vw,1.45rem); line-height: 1.3; color: rgba(246,241,230,.8); margin-top: 22px; max-width: 42ch; }
+.page-hero .hero-mascot { width: clamp(120px, 16vw, 188px); filter: drop-shadow(0 12px 24px rgba(0,0,0,.35)); }
+
+/* Sektion-grund */
+.section { padding: clamp(48px,7vw,90px) 0; }
+.section-head { max-width: 56ch; margin-bottom: 44px; }
+.section-head h2 { font-size: clamp(2rem, 4vw, 3rem); margin-top: 12px; }
+.section-head p { color: var(--ink-soft); font-size: 1.08rem; margin-top: 14px; }
+
+/* Jobb-rutnät */
+.jobs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.job { background: var(--paper); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; transition: transform .3s, box-shadow .3s; }
+.job:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+.job .job-img { width: 100%; aspect-ratio: 4/3; display: block; }
+.job img.job-img { object-fit: cover; }
+.job .job-body { padding: 24px 24px 26px; display: flex; flex-direction: column; flex: 1; }
+.job .job-cat { font-family: var(--font-text); font-weight: 700; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--green-600); }
+.job h3 { font-size: 1.32rem; margin-top: 10px; }
+.job p { color: var(--ink-soft); margin-top: 8px; font-size: .96rem; margin-bottom: 16px; }
+.job .job-place { margin-top: auto; padding-top: 14px; border-top: 1px solid var(--sand); font-size: .85rem; color: var(--stone); display: flex; align-items: center; gap: 7px; }
+.job .job-place::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--green-500); }
+
+/* CTA */
+.cta { background: var(--ink); color: var(--cream); border-radius: var(--radius-lg); text-align: center; }
+.cta .wrap { padding-block: clamp(48px,7vw,80px); }
+.cta h2 { color: #fff; font-size: clamp(2rem,4vw,3rem); }
+.cta p { color: rgba(246,241,230,.72); font-size: 1.1rem; margin-top: 14px; max-width: 44ch; margin-inline: auto; }
+.cta .btn { margin-top: 28px; }
+
+/* Footer (matchar startsidan) */
+.foot { background: var(--green-900); color: rgba(246,241,230,.7); padding: 70px 0 40px; margin-top: clamp(48px,7vw,90px); }
+.foot .wrap { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; }
+.foot .word { height: 26px; filter: brightness(0) invert(1); }
+.foot .f-mascot { width: 78px; margin-top: 24px; }
+.foot h4 { color: #fff; font-family: var(--font-text); font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 16px; }
+.foot ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.foot a { text-decoration: none; transition: color .2s; }
+.foot a:hover { color: var(--yellow); }
+.foot .bar { border-top: 1px solid rgba(255,255,255,.12); margin-top: 50px; padding-top: 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: .85rem; }
+
+@media (max-width: 1024px) { .nav { display: none; } .burger { display: inline-flex; } }
+@media (max-width: 900px) {
+  .page-hero .grid { grid-template-columns: 1fr; }
+  .jobs-grid { grid-template-columns: 1fr 1fr; }
+  .foot .wrap { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .jobs-grid { grid-template-columns: 1fr; }
+  .foot .wrap { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .brand img.mark { height: 40px; }
+  .brand img.word { display: none; }
+  .hdr .tel { display: none; }
+  .hdr .wrap { position: relative; gap: 0; }
+  .hdr .actions { flex: 1; display: flex; align-items: center; justify-content: flex-end; }
+  .hdr .actions .btn { position: absolute; left: 50%; transform: translateX(-50%); }
+}
+@media (max-width: 1024px) {
+  .nav.open { display: flex; flex-direction: column; gap: 22px; position: absolute; top: 100%; left: 0; right: 0; background: var(--paper); padding: 28px clamp(20px,5vw,56px); box-shadow: var(--shadow-md); margin: 0; }
+  .nav.open a { font-size: 1.2rem; }
+  .burger { flex-direction: column; gap: 5px; background: none; border: 0; cursor: pointer; padding: 10px; }
+  .burger span { width: 26px; height: 2.5px; background: var(--ink); border-radius: 2px; transition: .3s; }
+  .burger.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+  .burger.open span:nth-child(2) { opacity: 0; }
+  .burger.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+}
+</style>
+</head>
+<body id="top">
+
+<header class="hdr" data-header>
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Grävlingarna">
+      <img class="mark" src="assets/mascot-color.webp" alt="">
+      <img class="word" src="assets/logo-wordmark.svg" alt="Grävlingarna">
+    </a>
+    <nav class="nav" data-nav>
+      <a href="index.html#tjanster">Tjänster</a>
+      <a href="jobb.html" class="active">Jobb</a>
+      <a href="index.html#om">Om oss</a>
+      <a href="index.html#omdomen">Omdömen</a>
+      <a href="index.html#kontakt">Kontakt</a>
+    </nav>
+    <div class="actions">
+      <a class="tel" href="tel:+46850770530">08-507 705 30</a>
+      <a class="btn btn-green" href="index.html#kontakt">Få offert</a>
+      <button class="burger" data-burger aria-label="Meny" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- SID-HERO -->
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="crumbs reveal"><a href="index.html">Hem</a> <span>/</span> Jobb</div>
+      <div class="grid">
+        <div>
+          <span class="eyebrow reveal">Utförda projekt</span>
+          <h1 class="reveal d1">Våra <span class="leaf">jobb</span>.</h1>
+          <p class="lede reveal d2">Måleri, grävning, häckar, röjning. Det mesta vi tagit oss an finns här.</p>
+        </div>
+        <img class="hero-mascot reveal d2" src="assets/mascot-color.webp" alt="">
+      </div>
+    </div>
+  </section>
+
+  <!-- ALLA JOBB -->
+  <section class="section" id="alla-jobb">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Utfört arbete</span>
+        <h2>Jobb vi är stolta över.</h2>
+        <p>Här är ett urval av det vi gjort. Fler bilder kommer löpande.</p>
+      </div>
+      <div class="jobs-grid" data-jobs>
+
+        <article class="job reveal" data-cat="hackklippning">
+          <img class="job-img" src="assets/photos/hack-hog.webp" alt="Häckklippning" fetchpriority="high">
+          <div class="job-body">
+            <span class="job-cat">Häckklippning</span>
+            <h3>Häckklippning</h3>
+            <p>Vi klipper häckar i alla höjder och längder. Ris kan forslas bort.</p>
+          </div>
+        </article>
+
+        <article class="job reveal d1" data-cat="maleri">
+          <img class="job-img" src="assets/photos/malning-fasad.webp" alt="Fasadmålning" loading="lazy">
+          <div class="job-body">
+            <span class="job-cat">Måleri</span>
+            <h3>Fasadmålning</h3>
+            <p>Skrapning, grundning och målning av fasader, verandor och staket.</p>
+          </div>
+        </article>
+
+        <article class="job reveal d2" data-cat="maleri">
+          <img class="job-img" src="assets/photos/malning-efter.webp" alt="Målning av uthus" loading="lazy">
+          <div class="job-body">
+            <span class="job-cat">Måleri</span>
+            <h3>Målning av uthus</h3>
+            <p>Skrapat, grundat och färdigt. Vi tar hand om hela jobbet från start till slut.</p>
+          </div>
+        </article>
+
+        <article class="job reveal" data-cat="gravning">
+          <img class="job-img" src="assets/photos/gravning-efter.webp" alt="Grävning" loading="lazy">
+          <div class="job-body">
+            <span class="job-cat">Grävning</span>
+            <h3>Grävning</h3>
+            <p>Schaktning för häckar och planteringar. Rätt djup och bredd från start.</p>
+          </div>
+        </article>
+
+        <article class="job reveal d1" data-cat="ograsrensning">
+          <img class="job-img" src="assets/photos/ogras-efter.webp" alt="Ogräsrensning" loading="lazy">
+          <div class="job-body">
+            <span class="job-cat">Ogräsrensning</span>
+            <h3>Ogräsrensning</h3>
+            <p>Grundlig rensning av gångar, rabatter och uppfarter. Inte bara det som syns ovanifrån.</p>
+          </div>
+        </article>
+
+        <article class="job reveal d2" data-cat="markduk">
+          <img class="job-img" src="assets/photos/markduk-gavel.webp" alt="Markduk och grus" loading="lazy">
+          <div class="job-body">
+            <span class="job-cat">Markduk</span>
+            <h3>Markduk och grus</h3>
+            <p>Markduk läggs under grus eller bark för att hålla ogräset borta länge.</p>
+          </div>
+        </article>
+
+        <article class="job reveal" data-cat="rojning">
+          <img class="job-img" src="assets/photos/rojning-efter.webp" alt="Röjning" loading="lazy">
+          <div class="job-body">
+            <span class="job-cat">Röjning</span>
+            <h3>Röjning</h3>
+            <p>Slyröjning och röjning av buskage, trädgårdar och tomter. Vi tar hand om allt ris.</p>
+          </div>
+        </article>
+
+        <article class="job reveal d1" data-cat="ograsbranning">
+          <img class="job-img" src="assets/photos/ograsbranningx.webp" alt="Ogräsbränning" loading="lazy">
+          <div class="job-body">
+            <span class="job-cat">Ogräsbränning</span>
+            <h3>Ogräsbränning</h3>
+            <p>Effektiv bränning av ogräs på gångar, uppfarter och mellan plattor.</p>
+          </div>
+        </article>
+
+        <article class="job reveal d2" data-cat="grasklippning">
+          <img class="job-img" src="assets/photos/grasklippning.webp" alt="Gräsklippning" loading="lazy">
+          <div class="job-body">
+            <span class="job-cat">Gräsklippning</span>
+            <h3>Gräsklippning</h3>
+            <p>Regelbunden eller engångsklippning. Vi lämnar en välskött och fin gräsmatta.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="wrap">
+    <section class="cta reveal">
+      <div class="wrap">
+        <h2>Vill du ha något liknande gjort?</h2>
+        <p>Berätta vad du behöver hjälp med så svarar vi inom ett dygn med ett prisförslag.</p>
+        <a class="btn btn-yellow" href="index.html#kontakt">Begär offert</a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <img class="word" src="assets/logo-wordmark.svg" alt="Grävlingarna">
+      <p style="margin-top:18px;max-width:32ch">Grävlingarna Trädgårdsentreprenad i södra Stockholm.</p>
+      <img class="f-mascot" src="assets/mascot-color.webp" alt="" loading="lazy">
+    </div>
+    <div>
+      <h4>Sidor</h4>
+      <ul>
+        <li><a href="index.html#tjanster">Tjänster</a></li>
+        <li><a href="jobb.html">Jobb</a></li>
+        <li><a href="index.html#om">Om oss</a></li>
+        <li><a href="index.html#kontakt">Kontakt</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Kontakt</h4>
+      <ul>
+        <li><a href="tel:+46850770530">08-507 705 30</a></li>
+        <li><a href="mailto:info@gravlingarna.se">info@gravlingarna.se</a></li>
+        <li>Haninge · Tyresö · Huddinge · Nacka</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap"><div class="bar"><span>© 2026 Grävlingarna</span><span>Godkänd F-skatt · RUT-avdrag · Försäkrade</span></div></div>
+</footer>
+
+<script src="assets/image-slot.js"></script>
+<script src="assets/reveal.js"></script>
+</body>
+</html>
