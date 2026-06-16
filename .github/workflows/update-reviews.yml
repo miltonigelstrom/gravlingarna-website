@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Hämta kod
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Skapa reviews-config.json från secret
         run: |
