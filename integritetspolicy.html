@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Integritetspolicy | Grävlingarna Trädgårdsentreprenad</title>
+<meta name="description" content="Grävlingarnas integritetspolicy — hur vi hanterar dina personuppgifter i enlighet med GDPR.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://gravlingarna.se/integritetspolicy.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gravlingarna.se/integritetspolicy.html">
+<meta property="og:title" content="Integritetspolicy | Grävlingarna Trädgårdsentreprenad">
+<meta property="og:description" content="Hur vi hanterar dina personuppgifter i enlighet med GDPR.">
+<meta property="og:locale" content="sv_SE">
+<meta property="og:site_name" content="Grävlingarna">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<style>
+/* ====== INTEGRITETSPOLICY — samma uttryck som övriga sidor ====== */
+:root { --font-text: 'Roboto', system-ui, -apple-system, sans-serif; }
+.btn { font-family: var(--font-display); font-weight: 600; letter-spacing: .005em; }
+
+/* Header */
+.hdr { position: sticky; top: 0; z-index: 50; transition: background .3s, box-shadow .3s, padding .3s; padding: 18px 0; }
+.hdr.scrolled { background: rgba(246,241,230,.86); backdrop-filter: blur(12px); box-shadow: 0 1px 0 rgba(31,38,29,.08); padding: 10px 0; }
+.hdr .wrap { display: flex; align-items: center; gap: 28px; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.brand img.mark { height: 44px; width: auto; }
+.brand img.word { height: 27px; width: auto; }
+.nav { margin-left: auto; display: flex; align-items: center; gap: 30px; }
+.nav a { text-decoration: none; font-weight: 600; font-size: .98rem; color: var(--ink-soft); transition: color .2s; }
+.nav a:hover, .nav a.active { color: var(--green-700); }
+.hdr .actions { display: flex; align-items: center; gap: 16px; }
+.tel { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; text-decoration: none; color: var(--ink); white-space: nowrap; }
+.burger { display: none; }
+
+/* Sid-hero */
+.page-hero { background: var(--green-900); color: var(--cream); position: relative; overflow: hidden; padding: 30px 0 clamp(56px,7vw,84px); }
+.page-hero::after { content: ""; position: absolute; right: -60px; bottom: -40px; width: 320px; height: 320px; background: radial-gradient(circle at center, rgba(255,210,31,.16), transparent 68%); pointer-events: none; }
+.page-hero .crumbs { font-size: .9rem; color: rgba(246,241,230,.6); margin-bottom: 26px; display: flex; align-items: center; gap: 10px; }
+.page-hero .crumbs a { color: var(--yellow); text-decoration: none; font-weight: 600; }
+.page-hero .grid { display: grid; grid-template-columns: 1fr auto; gap: clamp(28px,5vw,64px); align-items: center; }
+.page-hero .eyebrow { color: var(--yellow); }
+.page-hero h1 { font-size: clamp(2.8rem, 6vw, 5rem); line-height: .96; color: #fff; margin-top: 16px; }
+.page-hero h1 .leaf { color: var(--yellow); }
+.page-hero .lede { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.15rem,1.7vw,1.45rem); line-height: 1.3; color: rgba(246,241,230,.8); margin-top: 22px; max-width: 42ch; }
+.page-hero .hero-mascot { width: clamp(120px, 16vw, 188px); filter: drop-shadow(0 12px 24px rgba(0,0,0,.35)); }
+
+/* Sektion-grund */
+.section { padding: clamp(48px,7vw,90px) 0; }
+
+/* Policy-innehåll */
+.policy-layout { display: grid; grid-template-columns: 220px 1fr; gap: clamp(32px,5vw,80px); align-items: start; }
+
+/* Sidonav */
+.policy-sidenav { position: sticky; top: 100px; background: var(--paper); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow-sm); border: 1px solid var(--sand); }
+.policy-sidenav h3 { font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; color: var(--stone); margin-bottom: 16px; font-family: var(--font-text); }
+.policy-sidenav ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.policy-sidenav li a { display: block; font-size: .9rem; font-weight: 500; color: var(--ink-soft); text-decoration: none; padding: 7px 10px; border-radius: 8px; transition: background .2s, color .2s; }
+.policy-sidenav li a:hover { background: var(--cream); color: var(--green-700); }
+
+/* Policy-body */
+.policy-body { max-width: 72ch; }
+.policy-body h2 { font-size: clamp(1.5rem, 2.5vw, 2rem); margin-top: 52px; padding-top: 52px; border-top: 1px solid var(--sand); }
+.policy-body h2:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+.policy-body p { font-family: var(--font-text); font-weight: 400; font-size: 1rem; color: var(--ink-soft); line-height: 1.65; margin-top: 16px; }
+.policy-body ul { font-family: var(--font-text); font-weight: 400; color: var(--ink-soft); line-height: 1.65; margin-top: 16px; padding-left: 1.5em; display: grid; gap: 8px; }
+.policy-body a { color: var(--green-700); text-decoration: underline; text-underline-offset: 3px; }
+.policy-body a:hover { color: var(--green-600); }
+.policy-body .updated { display: inline-block; font-size: .82rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--stone); margin-top: 8px; }
+
+/* Info-ruta */
+.policy-box { background: var(--cream); border-left: 4px solid var(--green-500); border-radius: 0 var(--radius) var(--radius) 0; padding: 20px 24px; margin-top: 20px; }
+.policy-box p { margin-top: 0; }
+
+/* Footer */
+.foot { background: var(--green-900); color: rgba(246,241,230,.7); padding: 70px 0 40px; margin-top: clamp(48px,7vw,90px); }
+.foot .wrap { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; }
+.foot .word { height: 26px; filter: brightness(0) invert(1); }
+.foot .f-mascot { width: 78px; margin-top: 24px; }
+.foot h4 { color: #fff; font-family: var(--font-text); font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 16px; }
+.foot ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.foot a { text-decoration: none; transition: color .2s; }
+.foot a:hover { color: var(--yellow); }
+.foot .bar { border-top: 1px solid rgba(255,255,255,.12); margin-top: 50px; padding-top: 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: .85rem; }
+
+@media (max-width: 1024px) { .nav { display: none; } .burger { display: inline-flex; } }
+@media (max-width: 900px) {
+  .page-hero .grid { grid-template-columns: 1fr; }
+  .policy-layout { grid-template-columns: 1fr; }
+  .policy-sidenav { position: static; }
+  .foot .wrap { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .foot .wrap { grid-template-columns: 1fr; }
+}
+@media (max-width: 1024px) {
+  .nav.open { display: flex; flex-direction: column; gap: 22px; position: absolute; top: 100%; left: 0; right: 0; background: var(--paper); padding: 28px clamp(20px,5vw,56px); box-shadow: var(--shadow-md); margin: 0; }
+  .nav.open a { font-size: 1.2rem; }
+  .burger { flex-direction: column; gap: 5px; background: none; border: 0; cursor: pointer; padding: 10px; }
+  .burger span { width: 26px; height: 2.5px; background: var(--ink); border-radius: 2px; transition: .3s; }
+  .burger.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+  .burger.open span:nth-child(2) { opacity: 0; }
+  .burger.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+}
+</style>
+</head>
+<body id="top">
+
+<header class="hdr" data-header>
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Grävlingarna">
+      <img class="mark" src="assets/mascot-color.png" alt="">
+      <img class="word" src="assets/logo-wordmark.svg" alt="Grävlingarna">
+    </a>
+    <nav class="nav" data-nav>
+      <a href="index.html#tjanster">Tjänster</a>
+      <a href="jobb.html">Jobb</a>
+      <a href="index.html#om">Om oss</a>
+      <a href="index.html#omdomen">Omdömen</a>
+      <a href="index.html#kontakt">Kontakt</a>
+    </nav>
+    <div class="actions">
+      <a class="tel" href="tel:+46850770530">08-507 705 30</a>
+      <a class="btn btn-green" href="index.html#kontakt">Få offert</a>
+      <button class="burger" data-burger aria-label="Meny" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- SID-HERO -->
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="crumbs reveal"><a href="index.html">Hem</a> <span>/</span> Integritetspolicy</div>
+      <div class="grid">
+        <div>
+          <span class="eyebrow reveal">GDPR &amp; personuppgifter</span>
+          <h1 class="reveal d1">Integritets<span class="leaf">policy</span>.</h1>
+          <p class="lede reveal d2">Hur vi samlar in, använder och skyddar dina personuppgifter.</p>
+        </div>
+        <img class="hero-mascot reveal d2" src="assets/mascot-color.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <!-- POLICY-INNEHÅLL -->
+  <section class="section">
+    <div class="wrap">
+      <div class="policy-layout">
+
+        <!-- Sidonav -->
+        <aside class="policy-sidenav reveal">
+          <h3>Innehåll</h3>
+          <ul>
+            <li><a href="#personuppgiftsansvarig">Personuppgiftsansvarig</a></li>
+            <li><a href="#vilka-uppgifter">Vilka uppgifter vi samlar in</a></li>
+            <li><a href="#andamal">Ändamål &amp; rättslig grund</a></li>
+            <li><a href="#tredje-part">Tredjepartstjänster</a></li>
+            <li><a href="#lagring">Lagring &amp; radering</a></li>
+            <li><a href="#dina-rattigheter">Dina rättigheter</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+          </ul>
+        </aside>
+
+        <!-- Policy-brödtext -->
+        <div class="policy-body reveal d1">
+          <span class="updated">Senast uppdaterad: juni 2026</span>
+
+          <h2 id="personuppgiftsansvarig">Personuppgiftsansvarig</h2>
+          <p>Grävlingarna Trädgårdsentreprenad Handelsbolag (org.nr 969803-3264) är personuppgiftsansvarig för behandlingen av dina personuppgifter på denna webbplats. Vi har inget utsett dataskyddsombud, vilket inte krävs för verksamheter i vår storlek.</p>
+          <div class="policy-box">
+            <p><strong>Grävlingarna Trädgårdsentreprenad HB</strong><br>
+            Org.nr 969803-3264<br>
+            E-post: <a href="mailto:info@gravlingarna.se">info@gravlingarna.se</a><br>
+            Telefon: <a href="tel:+46850770530">08-507 705 30</a><br>
+            Verksamma i södra Stockholm (Haninge, Tyresö, Huddinge, Nacka)</p>
+          </div>
+
+          <h2 id="vilka-uppgifter">Vilka uppgifter vi samlar in</h2>
+          <p>Vi samlar endast in uppgifter som du aktivt lämnar till oss via kontaktformuläret på webbplatsen:</p>
+          <ul>
+            <li>Namn</li>
+            <li>E-postadress</li>
+            <li>Telefonnummer (frivilligt)</li>
+            <li>Meddelande/beskrivning av det arbete du behöver hjälp med</li>
+          </ul>
+          <p>Vi samlar inte in uppgifter via cookies, spårningspixlar eller analysverktyg.</p>
+
+          <h2 id="andamal">Ändamål och rättslig grund</h2>
+          <p>Dina uppgifter behandlas uteslutande för att besvara din förfrågan och, om du begär det, ta fram ett prisförslag. Den rättsliga grunden är <strong>berättigat intresse</strong> (artikel 6.1 f GDPR). Vårt berättigade intresse är att kunna kommunicera med potentiella kunder som aktivt tagit kontakt med oss — behandlingen är nödvändig för detta ändamål och väger inte tyngre än din rätt till integritet, eftersom du själv initierat kontakten och uppgifterna används enbart för det du bad om.</p>
+          <p><strong>Obligatoriska uppgifter:</strong> Namn och e-postadress krävs för att vi ska kunna svara på din förfrågan. Telefonnummer är frivilligt. Utan namn och e-post kan vi inte hantera ditt ärende.</p>
+          <p>Vi använder aldrig dina uppgifter för marknadsföring utan ett separat samtycke, och vi säljer dem aldrig vidare.</p>
+
+          <h2 id="tredje-part">Tredjepartstjänster och databehandlare</h2>
+          <p>Webbplatsen använder ett begränsat antal externa tjänster. Där vi anlitar en tredje part som behandlar uppgifter för vår räkning ingår vi ett databehandlaravtal (DPA) i enlighet med GDPR artikel 28.</p>
+          <ul>
+            <li><strong>Formspree</strong> (databehandlare) — hanterar inkommande kontaktformulär. Uppgifterna skickas till Formsprees servrar i USA och vidarebefordras till vår e-post. Formspree är Privacy Shield-certifierat och använder standardavtalsklausuler (SCC) för överföringar till tredjeland. Se <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener">Formsprees integritetspolicy</a>.</li>
+            <li><strong>Google Fonts</strong> — typsnitt laddas från Googles servrar i USA, vilket innebär att din IP-adress kan loggas av Google vid sidinladdning. Överföringen sker med stöd av Googles standardavtalsklausuler (SCC). Inga kakor sätts av Google Fonts.</li>
+            <li><strong>Google Reviews</strong> — omdömen hämtas och visas statiskt på webbplatsen. Inga personuppgifter om besökaren skickas till Google vid sidvisning.</li>
+          </ul>
+
+          <h2 id="lagring">Lagring och radering</h2>
+          <p>Vi sparar dina kontaktuppgifter så länge ärendet är aktivt och upp till 24 månader efter avslutat uppdrag, i enlighet med bokföringslagen och god affärssed. Därefter raderas uppgifterna.</p>
+          <p>Du kan när som helst begära att vi raderar dina uppgifter om det inte finns ett lagkrav som hindrar oss (se <em>Dina rättigheter</em> nedan).</p>
+
+          <h2 id="dina-rattigheter">Dina rättigheter</h2>
+          <p>Enligt GDPR har du rätt att:</p>
+          <ul>
+            <li><strong>Få tillgång</strong> till de uppgifter vi har om dig</li>
+            <li><strong>Rätta</strong> felaktiga uppgifter</li>
+            <li><strong>Radera</strong> dina uppgifter ("rätten att bli glömd")</li>
+            <li><strong>Begränsa</strong> behandlingen i vissa situationer</li>
+            <li><strong>Invända</strong> mot behandling som grundar sig på berättigat intresse</li>
+            <li><strong>Dataportabilitet</strong> — få ut dina uppgifter i ett maskinläsbart format</li>
+          </ul>
+          <p>Du har även rätt att lämna klagomål till Integritetsskyddsmyndigheten (IMY) på <a href="https://www.imy.se" target="_blank" rel="noopener">imy.se</a> om du anser att vi hanterar dina uppgifter felaktigt.</p>
+
+          <h2 id="kontakt">Kontakt i integritetsfrågor</h2>
+          <p>Har du frågor om hur vi hanterar dina personuppgifter, eller vill du utöva dina rättigheter? Hör av dig till oss:</p>
+          <div class="policy-box">
+            <p>E-post: <a href="mailto:info@gravlingarna.se">info@gravlingarna.se</a><br>
+            Telefon: <a href="tel:+46850770530">08-507 705 30</a><br>
+            Vi besvarar din begäran utan onödigt dröjsmål, senast inom en månad.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <img class="word" src="assets/logo-wordmark.svg" alt="Grävlingarna">
+      <p style="margin-top:18px;max-width:32ch">Grävlingarna Trädgårdsentreprenad i södra Stockholm.</p>
+      <img class="f-mascot" src="assets/mascot-color.png" alt="">
+    </div>
+    <div>
+      <h4>Sidor</h4>
+      <ul>
+        <li><a href="index.html#tjanster">Tjänster</a></li>
+        <li><a href="jobb.html">Jobb</a></li>
+        <li><a href="index.html#om">Om oss</a></li>
+        <li><a href="index.html#kontakt">Kontakt</a></li>
+        <li><a href="integritetspolicy.html">Integritetspolicy</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Kontakt</h4>
+      <ul>
+        <li><a href="tel:+46850770530">08-507 705 30</a></li>
+        <li><a href="mailto:info@gravlingarna.se">info@gravlingarna.se</a></li>
+        <li>Haninge · Tyresö · Huddinge · Nacka</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap"><div class="bar"><span>© 2026 Grävlingarna</span><span>Godkänd F-skatt · RUT-avdrag · Försäkrade</span></div></div>
+</footer>
+
+<script src="assets/reveal.js"></script>
+<script>
+/* Header scroll-effekt */
+const hdr = document.querySelector('[data-header]');
+const onScroll = () => hdr.classList.toggle('scrolled', window.scrollY > 20);
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+/* Burger-meny */
+const burger = document.querySelector('[data-burger]');
+const nav    = document.querySelector('[data-nav]');
+burger?.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  burger.classList.toggle('open', open);
+  burger.setAttribute('aria-expanded', open);
+});
+</script>
+</body>
+</html>
