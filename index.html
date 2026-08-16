@@ -267,6 +267,10 @@ form { background: var(--paper); border-radius: var(--radius-lg); padding: clamp
 form .btn { width: 100%; justify-content: center; margin-top: 6px; font-size: 1.05rem; }
 .form-foot { margin-top: 16px; font-size: .85rem; color: var(--stone); text-align: center; }
 [data-form-note] { background: rgba(0,140,75,.12); color: var(--green-700); border-radius: 12px; padding: 14px 16px; font-weight: 700; margin-bottom: 18px; }
+.pause-notice { background: var(--paper); border-radius: var(--radius-lg); padding: clamp(26px, 4vw, 44px); color: var(--ink); box-shadow: var(--shadow-lg); display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 12px; min-height: 100%; }
+.pause-notice .eyebrow { color: var(--green-600); }
+.pause-notice h3 { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2.1rem); margin: 0; }
+.pause-notice p { color: var(--stone); font-size: 1.05rem; max-width: 42ch; }
 
 /* Footer */
 .foot { background: var(--green-900); color: rgba(246,241,230,.7); padding: 70px 0 40px; }
@@ -625,10 +629,16 @@ form .btn { width: 100%; justify-content: center; margin-top: 6px; font-size: 1.
           <a class="ci" href="https://www.facebook.com/profile.php?id=61582218075044" target="_blank" rel="noopener"><small>Facebook &amp; Messenger</small><b>Grävlingarna</b></a>
         </div>
       </div>
+      <div class="pause-notice reveal d1">
+        <span class="eyebrow">Pausad säsong</span>
+        <h3>Vi pausar verksamheten just nu.</h3>
+        <p>Tack för ditt intresse! Vi har pausat verksamheten för säsongen. Vi är tillbaka nästa år så hör gärna av dig då!</p>
+      </div>
+      <!--
+      ORIGINAL KONTAKTFORMULÄR (pausat tillfälligt, återställ genom att kommentera bort denna sektion):
       <form data-contact-form class="reveal d1" novalidate name="kontakt" netlify netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="kontakt">
         <div data-form-note hidden>Tack! Ditt meddelande har skickats. Vi hör av oss inom kort.</div>
-        <!-- honeypot — dölj för bots -->
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
         <div class="field-row">
           <div class="field"><label>Namn <span class="req">*</span></label><input type="text" name="namn" placeholder="För- och efternamn" required></div>
@@ -639,6 +649,7 @@ form .btn { width: 100%; justify-content: center; margin-top: 6px; font-size: 1.
         <button class="btn btn-yellow" type="submit">Skicka förfrågan</button>
         <p class="form-foot">Vi svarar oftast samma dag · Kostnadsfri offert</p>
       </form>
+      -->
     </div>
   </section>
 
